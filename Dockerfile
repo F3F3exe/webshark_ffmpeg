@@ -17,7 +17,7 @@ RUN ../node-webshark/sharkd/build.sh
 WORKDIR /usr/src
 RUN mkdir web \
  && cd web \
- && wget https://github.com/F3F3exe/webshark_ffmpeg/archive/refs/tags/1.zip \
+ && wget github.com/F3F3exe/webshark_ffmpeg/archive/refs/tags/1.zip \
  && unzip 1.zip \
  && rm -rf 1.zip \
  && sed -i 's|href="/"|href="/webshark/"|g' index.html
