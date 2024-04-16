@@ -8,7 +8,7 @@ RUN mkdir -p /out /usr/src /var/run
 WORKDIR /usr/src
 
 #RUN git clone --depth=1 https://github.com/qxip/node-webshark.git /usr/src/node-webshark
-RUN git clone --depth=1 https://github.com/F3F3exe/webshark_ffmpeg /usr/src/node-webshark
+RUN git clone --depth=1 https://github.com/F3F3exe/webshark_ffmpeg.git /usr/src/node-webshark
 RUN git clone --depth=1 https://gitlab.com/wireshark/wireshark.git /usr/src/wireshark
 
 WORKDIR /usr/src/wireshark
@@ -18,8 +18,8 @@ WORKDIR /usr/src
 RUN mkdir web \
  && cd web \
  && wget https://github.com/F3F3exe/webshark_ffmpeg/archive/refs/tags/1.zip \
- && unzip latest.zip \
- && rm -rf latest.zip \
+ && unzip 1.zip \
+ && rm -rf 1.zip \
  && sed -i 's|href="/"|href="/webshark/"|g' index.html
 
 # && wget github.com/qxip/webshark-ui/releases/latest/download/latest.zip \
