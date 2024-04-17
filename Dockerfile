@@ -12,6 +12,8 @@ RUN git clone --depth=1 https://github.com/F3F3exe/webshark_ffmpeg.git /usr/src/
 RUN git clone --depth=1 https://gitlab.com/wireshark/wireshark.git /usr/src/wireshark
 
 RUN git config --global --add safe.directory /usr/src/wireshark
+RUN git config --global --add safe.directory /usr/src/node-webshark
+
 
 WORKDIR /usr/src/wireshark
 RUN ../node-webshark/sharkd/build.sh
