@@ -6,7 +6,7 @@ set -ex
 # apt-get update && apt-get install -y libmaxminddb-dev
 
 # Update wireshark sources
-git pull
+#git pull
 #git reset --hard 640ded8e1d45ec3ee8594c385b1045cbaa0042a0   ## tested with this hash
 
 # Integrate sharkd
