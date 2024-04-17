@@ -7,12 +7,12 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /out /usr/src /var/run
 WORKDIR /usr/src
 
-#RUN git clone --depth=1 https://github.com/qxip/node-webshark.git /usr/src/node-webshark
-RUN git clone --depth=1 https://github.com/F3F3exe/webshark_ffmpeg.git /usr/src/node-webshark
+RUN git clone --depth=1 https://github.com/qxip/webshark.git /usr/src/node-webshark
+#RUN git clone --depth=1 https://github.com/F3F3exe/webshark_ffmpeg.git /usr/src/node-webshark
 RUN git clone --depth=1 https://gitlab.com/wireshark/wireshark.git /usr/src/wireshark
 
 WORKDIR /usr/src/wireshark
-RUN ../webshark_ffmpeg/sharkd/build.sh
+RUN ../node-webshark/sharkd/build.sh
 
 WORKDIR /usr/src
 RUN mkdir web \
