@@ -22,9 +22,9 @@ RUN ../node-webshark/sharkd/build.sh
 WORKDIR /usr/src
 RUN mkdir web \
  && cd web \
- && wget github.com/F3F3exe/webshark_ffmpeg/archive/refs/tags/1.zip \
- && unzip 1.zip \
- && rm -rf 1.zip \
+ && wget github.com/F3F3exe/webshark_ffmpeg/archive/refs/tags/2.zip \
+ && unzip 2.zip \
+ && rm -rf 2.zip \
  && sed -i 's|href="/"|href="/webshark/"|g' index.html
 
 # && wget github.com/qxip/webshark-ui/releases/latest/download/latest.zip \
