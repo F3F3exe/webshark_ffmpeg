@@ -14,6 +14,7 @@ RUN git clone --depth=1 https://gitlab.com/wireshark/wireshark.git /usr/src/wire
 RUN git config --global --add safe.directory /usr/src/wireshark
 RUN git config --global --add safe.directory /usr/src/node-webshark
 
+COPY --chown=node . /usr/src/node-webshark
 
 WORKDIR /usr/src/wireshark
 RUN ../node-webshark/sharkd/build.sh
