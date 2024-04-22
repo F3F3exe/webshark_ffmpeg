@@ -1150,7 +1150,7 @@ const {createFFmpeg, fetchFile} = FFmpeg
         m.push("-i", "segment.pcap", "-id3v2_version", "3", p);
         const r = await ffmpeg.run(...m);
         console.log(r),
-        console.log("Complete transding");
+        console.log("Complete transdingens");
         console.log(m);
         const s = ffmpeg.FS("readFile", p);
         return URL.createObjectURL(new Blob([s.buffer],{
