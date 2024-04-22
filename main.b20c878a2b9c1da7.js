@@ -46848,6 +46848,10 @@
                         });
                         const r = `player-${Qr(JSON.stringify(e))}`;
                         let o = a.players.find(c=>c.id === r);
+                        console.log("r: ");
+                        console.log(r);
+                        console.log("o: ");
+                        console.log(o);
                         if (!o) {
                             console.log("e: ");
                             console.log(e);
