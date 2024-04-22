@@ -40372,12 +40372,17 @@
                     console.log(c);
                     console.log("s:");
                     console.log(s);
-                    a = a.replace(/:/g, ".");
                     console.log("a after: ");
+                    if (a.includes(":")) {
+                        a = "[" + a + "]";
+                    } 
+                    if (o.includes(":")) {
+                        o = "[" + o + "]";
+                    } 
                     console.log(a);
-                    o =  o.replace(/:/g, ".");
+                    
 
-                    const l = "rtp-analyse:" + [ r, c, s.toString(16)].join("_");
+                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
                     console.log(this.httpGet("tap", {
