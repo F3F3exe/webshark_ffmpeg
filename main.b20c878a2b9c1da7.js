@@ -8218,6 +8218,8 @@
                     }
                 }
                 find(e) {
+                    console.log("find e:");
+                    console.log(e);
                     const a = this.factories.find(r=>r.supports(e));
                     if (null != a)
                         return a;
@@ -40366,6 +40368,7 @@
                     console.log(s);
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
+                      console.log(l);
                     return this.httpGet("tap", {
                         tap0: l
                     })
