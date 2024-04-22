@@ -40372,14 +40372,8 @@
                     console.log(c);
                     console.log("s:");
                     console.log(s);
-                    console.log("a after: ");
-                    if (a.includes(":")) {
-                        a = "[" + a + "]";
-                    } 
-                    if (o.includes(":")) {
-                        o = "[" + o + "]";
-                    } 
-                    console.log(a);
+                    a = "2001:4d98:3ffc:effc::1e";
+                    o = "2a02:1216:32b1:2da:80f6:a9ab:13e8:35cb";
                     
 
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
