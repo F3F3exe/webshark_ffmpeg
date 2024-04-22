@@ -46842,6 +46842,10 @@
                         console.log({
                             ssrc: e.ssrc
                         });
+                        const {saddr: a1, sport: r1, daddr: o1, dport: c, ssrc: s} = e
+                        console.log({
+                            ssrc: s
+                        });
                         const r = `player-${Qr(JSON.stringify(e))}`;
                         let o = a.players.find(c=>c.id === r);
                         if (!o) {
