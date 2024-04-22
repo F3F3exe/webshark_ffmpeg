@@ -40361,17 +40361,7 @@
                 }
                 getRTPStreamTap(e) {
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
-                    console.log("hello world0");
-                    console.log("a before:");
-                    console.log(a);
-                    console.log("r:");
-                    console.log(r);
-                    console.log("o:");
-                    console.log(o);
-                    console.log("c:");
-                    console.log(c);
-                    console.log("s:");
-                    console.log(s);
+                    
                     a = "2001:4d98:3ffc:effc::1e";
                     o = "2a02:1216:32b1:2da:80f6:a9ab:13e8:35cb";
                     
@@ -40380,7 +40370,7 @@
                       console.log("hello world1");
                       console.log(l);
                     console.log(this.httpGet("tap", {
-                        tap0: l
+                        tap0: encodeURIComponent(l)
                     }));
                     return this.httpGet("tap", {
                         tap0: l
@@ -46883,7 +46873,6 @@
                         if (!o) {
                             console.log("e: ");
                             console.log(e);
-                            console.log(yield a.webSharkDataService.getRTPStreamTap(e));
                             const c = yield a.webSharkDataService.getRTPStreamTap(e)
                               , {taps: [{ssrc: s}]} = c;
                             
