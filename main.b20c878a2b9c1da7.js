@@ -40352,8 +40352,10 @@
                     return `${this.url}?${d}`
                 }
                 getRTPStreamTap(e) {
-                    const {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e
-                      , l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
+                    const {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
+                    console.log("hello world0");
+                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
+                      console.log("hello world1");
                     return this.httpGet("tap", {
                         tap0: l
                     })
