@@ -46839,6 +46839,9 @@
                         console.log({
                             row: e
                         });
+                        console.log({
+                            ssrc: e.ssrc
+                        });
                         const r = `player-${Qr(JSON.stringify(e))}`;
                         let o = a.players.find(c=>c.id === r);
                         if (!o) {
