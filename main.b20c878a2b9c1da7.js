@@ -46842,10 +46842,11 @@
                         const r = `player-${Qr(JSON.stringify(e))}`;
                         let o = a.players.find(c=>c.id === r);
                         if (!o) {
+                            console.log("c: ");
+                            console.log(yield a.webSharkDataService.getRTPStreamTap(e));
                             const c = yield a.webSharkDataService.getRTPStreamTap(e)
                               , {taps: [{ssrc: s}]} = c;
-                            console.log("c.ssrc: ");
-                            console.log(c.ssrc);
+                            
                             console.log(a.audioStreamsBlobURL, {
                                 rowData: c
                             }),
