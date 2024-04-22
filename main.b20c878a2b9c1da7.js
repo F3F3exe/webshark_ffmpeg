@@ -40354,6 +40354,16 @@
                 getRTPStreamTap(e) {
                     const {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     console.log("hello world0");
+                    console.log("a:");
+                    console.log(a);
+                    console.log("r:");
+                    console.log(r);
+                    console.log("o:");
+                    console.log(o);
+                    console.log("c:");
+                    console.log(c);
+                    console.log("s:");
+                    console.log(s);
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                     return this.httpGet("tap", {
