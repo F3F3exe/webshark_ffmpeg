@@ -40362,18 +40362,13 @@
                 getRTPStreamTap(e) {
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     
-                    a = "2001:4d98:3ffc:effc::1e";
-                    o = "2a02:1216:32b1:2da:80f6:a9ab:13e8:35cb";
-                    
 
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
-                    console.log(this.httpGet("tap", {
-                        tap0: encodeURIComponent(l)
-                    }));
+                    console.log(encodeURIComponent(I));
                     return this.httpGet("tap", {
-                        tap0: l
+                        tap0: encodeURIComponent(l)
                     })
                 }
                 postFile(e, a) {
