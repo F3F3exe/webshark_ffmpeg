@@ -1152,7 +1152,6 @@ const {createFFmpeg, fetchFile} = FFmpeg
         console.log(r);
         console.log(g);
         console.log("Complete transding");
-        console.log(segment.pcap);
         console.log(m);
         const s = ffmpeg.FS("readFile", p);
         return URL.createObjectURL(new Blob([s.buffer],{
