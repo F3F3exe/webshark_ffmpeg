@@ -46849,7 +46849,8 @@
                         const r = `player-${Qr(JSON.stringify(e))}`;
                         let o = a.players.find(c=>c.id === r);
                         if (!o) {
-                            console.log("c: ");
+                            console.log("e: ");
+                            console.log(e);
                             console.log(yield a.webSharkDataService.getRTPStreamTap(e));
                             const c = yield a.webSharkDataService.getRTPStreamTap(e)
                               , {taps: [{ssrc: s}]} = c;
