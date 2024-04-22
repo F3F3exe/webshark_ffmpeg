@@ -40368,7 +40368,7 @@
                       console.log(l);
                     console.log(encodeURIComponent(I));
                     return this.httpGet("tap", {
-                        tap0: encodeURIComponent(l)
+                        tap0: l
                     })
                 }
                 postFile(e, a) {
