@@ -40308,8 +40308,12 @@
                     })
                 }
                 httpGet(e, a=null) {
-                    if ("string" == typeof a)
+                    if ("string" == typeof a){
+                        console.log("httpget now");
+                        console.log(this.getBufferGate(`${this.url}?method=${e}&${a}`).toPromise());
+                        console.log("seems to work");
                         return this.getBufferGate(`${this.url}?method=${e}&${a}`).toPromise();
+                    }
                     if (!this.getCapture())
                         return new Promise((o,c)=>{
                             c({
@@ -40318,6 +40322,8 @@
                         }
                         );
                     const r = a ? this.params(e, a) : "method=" + e;
+                    console.log("httpget r:");
+                    console.log(r);
                     return this.getBufferGate(`${this.url}?${r}`).toPromise()
                 }
                 getInfo() {
@@ -40369,6 +40375,9 @@
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
+                    console.log(this.httpGet("tap", {
+                        tap0: l
+                    }));
                     return this.httpGet("tap", {
                         tap0: l
                     })
