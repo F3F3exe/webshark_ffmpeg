@@ -40362,7 +40362,7 @@
                 getRTPStreamTap(e) {
                     const {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     console.log("hello world0");
-                    console.log("a:");
+                    console.log("a before:");
                     console.log(a);
                     console.log("r:");
                     console.log(r);
@@ -40372,6 +40372,11 @@
                     console.log(c);
                     console.log("s:");
                     console.log(s);
+                    a = a.replace(/:/g, ".");
+                    console.log("a after: ");
+                    console.log(a);
+                    o =  o.replace(/:/g, ".");
+
                     const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
