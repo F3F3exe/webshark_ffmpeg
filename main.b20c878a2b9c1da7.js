@@ -40323,7 +40323,8 @@
                         );
                     console.log("type of a: ");
                     console.log(typeof a);
-                    const r = a ? this.params(e, a) : "method=" + e;
+                    console.log(a);
+                    const r = "method="+e; //a ? this.params(e, a) : "method=" + e;
                     console.log("httpget r:");
                     console.log(r);
                     console.log("url: ");
