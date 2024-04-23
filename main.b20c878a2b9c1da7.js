@@ -40368,7 +40368,7 @@
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     
 
-                    const l = "rtp-analyse:" + [encodeURIComponent(a), r, encodeURIComponent(o), c, s.toString(16)].join("_");
+                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
                       let ret = this.httpGet("tap", {
@@ -40384,6 +40384,11 @@
                 }
                 postFile(e, a) {
                     const r = new FormData;
+                    console.log("upload capture file on url: ");
+                    console.log(this.urlUpload);
+                    console.log("e, a: ");
+                    console.log(e);
+                    console.log(a);
                     return r.append("fileKey", e, e.name),
                     this.http.post(a ? this.urlUpload + "/now" : this.urlUpload, r).pipe(me(()=>{
                         this.setCaptureFile(e.name),
