@@ -40324,7 +40324,7 @@
                     console.log("type of a: ");
                     console.log(typeof a);
                     console.log(a);
-                    const r = "method="+e; //a ? this.params(e, a) : "method=" + e;
+                    const r = a ? this.params(e, a) : "method=" + e;
                     console.log("httpget r:");
                     console.log(r);
                     console.log("url: ");
@@ -40368,7 +40368,7 @@
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     
 
-                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
+                    const l = "rtp-analyse:" + [encodeURIComponent(a), r, encodeURIComponent(o), c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
                       let ret = this.httpGet("tap", {
