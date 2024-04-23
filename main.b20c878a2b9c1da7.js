@@ -40363,10 +40363,9 @@
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     
 
-                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
+                    const l = "rtp-analyse:" + ["["+a+"]", r, "["+o+"]", c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
-                    console.log(encodeURIComponent(I));
                     return this.httpGet("tap", {
                         tap0: l
                     })
