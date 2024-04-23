@@ -40310,7 +40310,7 @@
                 httpGet(e, a=null) {
                     if ("string" == typeof a){
                         console.log("httpget now");
-                        console.log(this.getBufferGate(`${this.url}?method=${e}&${a}`).toPromise());
+                        console.log(this.getBufferGate(`${this.url}?method=${e}&${a}`));
                         console.log("seems to work");
                         return this.getBufferGate(`${this.url}?method=${e}&${a}`).toPromise();
                     }
@@ -40321,9 +40321,13 @@
                             })
                         }
                         );
+                    console.log("type of a: ");
+                    console.log(typeof a);
                     const r = a ? this.params(e, a) : "method=" + e;
                     console.log("httpget r:");
                     console.log(r);
+                    console.log("url: ");
+                    console.log(`${this.url}?${r}`);
                     return this.getBufferGate(`${this.url}?${r}`).toPromise()
                 }
                 getInfo() {
@@ -40363,11 +40367,11 @@
                     let {saddr: a, sport: r, daddr: o, dport: c, ssrc: s} = e;
                     
 
-                    const l = "rtp-analyse:" + ["["+a+"]", r, "["+o+"]", c, s.toString(16)].join("_");
+                    const l = "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
                       let ret = this.httpGet("tap", {
-                        tap0:  "rtp-analyse:" + ["["+a+"]", r, "["+o+"]", c, s.toString(16)].join("_")
+                        tap0:  "rtp-analyse:" + [a, r, o, c, s.toString(16)].join("_")
                       });
 
                       console.log("ret: ");
