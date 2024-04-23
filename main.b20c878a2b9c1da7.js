@@ -40366,9 +40366,16 @@
                     const l = "rtp-analyse:" + ["["+a+"]", r, "["+o+"]", c, s.toString(16)].join("_");
                       console.log("hello world1");
                       console.log(l);
-                    return this.httpGet("tap", {
-                        tap0: l
-                    })
+                      let ret = this.httpGet("tap", {
+                        tap0:  "rtp-analyse:" + ["["+a+"]", r, "["+o+"]", c, s.toString(16)].join("_")
+                      });
+
+                      console.log("ret: ");
+                      console.log(ret);
+                      return ret
+                    //return this.httpGet("tap", {
+                    //    tap0: l
+                    //})
                 }
                 postFile(e, a) {
                     const r = new FormData;
