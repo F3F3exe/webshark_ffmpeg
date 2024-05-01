@@ -42092,6 +42092,9 @@
                                 children: [...s, ...c]
                             }];
                             e.menuTree = b.map(M=>(M.children = M.children.reduce((C,A)=>{
+                                console.log("A tap:");
+                                console.log(A.tap);
+                                console.log(A.tap.split(":")[0]);
                                 if ("eo" === A.tap.split(":")[0])
                                     return C[A.name] = A.tap,
                                     C;
