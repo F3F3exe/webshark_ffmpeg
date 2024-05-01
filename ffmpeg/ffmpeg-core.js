@@ -310,6 +310,7 @@ var createFFmpegCore = (function () {
         }
       }; function Dc(a) { a = a.split("."); for (var b = 0; 4 > b; b++) { var c = Number(a[b]); if (isNaN(c)) return null; a[b] = c } return (a[0] | a[1] << 8 | a[2] << 16 | a[3] << 24) >>> 0 }
       function Ec(a) {
+        console.log("SPLIT :");
         var b, c, d = []; if (!/^((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\3)::|:\b|$))|(?!\2\3)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4})$/i.test(a)) return null; if ("::" === a) return [0, 0, 0, 0, 0, 0, 0, 0]; a = 0 === a.indexOf("::") ? a.replace("::", "Z:") : a.replace("::", ":Z:"); 0 < a.indexOf(".") ? (a = a.replace(/[.]/g, ":"), a = a.split(":"), a[a.length - 4] = parseInt(a[a.length - 4]) + 256 * parseInt(a[a.length - 3]), a[a.length - 3] = parseInt(a[a.length - 2]) + 256 * parseInt(a[a.length -
           1]), a = a.slice(0, a.length - 2)) : a = a.split(":"); for (b = c = 0; b < a.length; b++)if ("string" === typeof a[b]) if ("Z" === a[b]) { for (c = 0; c < 8 - a.length + 1; c++)d[b + c] = 0; --c } else d[b + c] = Fc(parseInt(a[b], 16)); else d[b + c] = a[b]; return [d[1] << 16 | d[0], d[3] << 16 | d[2], d[5] << 16 | d[4], d[7] << 16 | d[6]]
       } var Gc = 1, Hc = {}, Ic = {};

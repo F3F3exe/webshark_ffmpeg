@@ -42073,7 +42073,7 @@
                     return Gi(function*() {
                         try {
                             e.menuTreeIndex = [],
-                            console.log("MENU:ngOnInit()");
+                            console.log("MENU:ngOnInit6()");
                             const {stats: a, nstat: r, convs: o, seqa: c, taps: s, eo: l, srt: d, rtd: m} = yield e.webSharkDataService.getInfo()
                               , b = [{
                                 name: "Endpoints",
